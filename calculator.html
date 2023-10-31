@@ -1,0 +1,64 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div class="identitas">
+    <p>Fawwas Aldy Nurramdhan Kaisar<br>5025221179<br>Teknik Informatika<br><br></p>
+</div>
+<div id="app">
+    <input v-model="bil1" placeholder="bilangan 1">
+    <input v-model="bil2" placeholder="bilangan 2">
+    <br>
+
+    <div class="tombol1">
+        <p>tombol 1:</p>
+        <button v-on:click="bil1 += 1">1</button>
+        <button v-on:click="bil1 += 2">2</button>
+        <button v-on:click="bil1 += 3">3</button>
+        <button v-on:click="bil1 += 4">4</button>
+        <button v-on:click="bil1 += 5">5</button>
+        <button v-on:click="bil1 += 6">6</button>
+        <button v-on:click="bil1 += 7">7</button>
+        <button v-on:click="bil1 += 8">8</button>
+        <button v-on:click="bil1 += 9">9</button>
+        <button v-on:click="bil1 += 0">0</button>
+        <button v-on:click="bil1 = ''">clear</button>
+    </div>
+    <div class="tombol2">
+        <p>tombol 2:</p>
+        <button v-on:click="bil2 += 1">1</button>
+        <button v-on:click="bil2 += 2">2</button>
+        <button v-on:click="bil2 += 3">3</button>
+        <button v-on:click="bil2 += 4">4</button>
+        <button v-on:click="bil2 += 5">5</button>
+        <button v-on:click="bil2 += 6">6</button>
+        <button v-on:click="bil2 += 7">7</button>
+        <button v-on:click="bil2 += 8">8</button>
+        <button v-on:click="bil2 += 9">9</button>
+        <button v-on:click="bil2 += 0">0</button>
+        <button v-on:click="bil2 = ''">clear</button>
+    </div>
+
+    <div class="operasi">
+        <p>operasi:</p>
+        <button v-on:click="hasil = parseFloat(bil1) + parseFloat(bil2)">+</button>
+        <button v-on:click="hasil = parseFloat(bil1) - parseFloat(bil2)">-</button>
+        <button v-on:click="hasil = parseFloat(bil1) * parseFloat(bil2)">*</button>
+        <button v-on:click="hasil = parseFloat(bil1) / parseFloat(bil2)">/</button>
+    </div>
+    <div class="hasil">
+        <p>hasil: {{hasil}}</p>
+    </div>
+    
+</div>
+<br>
+<div id="app2">
+    <div>
+        <ul>
+            <li v-for="(item, index) in python_is_trash" :key="index">
+                {{ item.nama }} - {{ item.kelas }} - {{ item.hobi }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="calculator.js"></script>
+<script src="list.js"></script>
