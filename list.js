@@ -16,5 +16,3 @@ createApp({
         }
     }
 }).mount('#app2')
-
-console.log(this.python_is_trash);
